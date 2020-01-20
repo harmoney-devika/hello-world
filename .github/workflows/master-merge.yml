@@ -25,25 +25,25 @@ jobs:
           target_branch: 'QA1'
          
     - uses: actions/checkout@master
-    - name: Merge to QA1
-      uses: pujari-devika/merge-branch@v1.1.0
-      with:
-          type: now
-          target_branch: 'QA1'
-          
-    - uses: actions/checkout@master
     - name: Merge to QA2
       uses: pujari-devika/merge-branch@v1.1.0
       with:
           type: now
           target_branch: 'QA2'
-                
+          
     - uses: actions/checkout@master
     - name: Merge to QA3
       uses: pujari-devika/merge-branch@v1.1.0
       with:
           type: now
           target_branch: 'QA3'
+                
+    - uses: actions/checkout@master
+    - name: Merge to QA4
+      uses: pujari-devika/merge-branch@v1.1.0
+      with:
+          type: now
+          target_branch: 'QA4'
                 
     env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
