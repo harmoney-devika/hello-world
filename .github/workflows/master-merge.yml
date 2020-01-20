@@ -2,7 +2,7 @@ name: sandbox-refresh
 
 on:
   schedule:
-    - cron:  '5 * * * *'
+    - cron:  '* * * * *'
 
 jobs:
   build:
