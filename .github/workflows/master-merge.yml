@@ -1,4 +1,4 @@
-name: m
+name: sandbox-refresh
 
 on:
   schedule:
