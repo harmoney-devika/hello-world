@@ -1,10 +1,6 @@
 name: sandbox-refresh
 
-on:
-  push:
-    branches:
-      - master
-        
+on:          
   schedule:
     - cron:  '0 * * * *'
 
