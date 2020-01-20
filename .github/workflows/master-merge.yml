@@ -1,0 +1,27 @@
+name: sandbox-refresh
+
+on:    
+  push:
+    branches:
+      - master      
+  schedule:
+    - cron:  '0 * * * *'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Run a one-line script
+      run: echo Hello, world!
+    
+    - uses: actions/checkout@master
+    - name: Merge to uat branch
+      uses: pujari-devika/merge-branch@v1.1.0
+      with:
+          type: now
+          target_branch: 'develop'
+    env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
